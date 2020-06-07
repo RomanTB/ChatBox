@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ChatBox</title>
+  </head>
+
+  <body>
+    <div id="emisor">
+      <h3>TeleWhatGram</h3>
+
+      <textarea
+        placeholder="Escriba su mensaje.."
+        class="msgBox"
+        id="msgEnvio"
+      ></textarea>
+
+      <button id="btnSend">Enviar</button>
+    </div>
+
+    <section id="receptor">
+      <h3>Mensajes recibidos</h3>
+      <textarea disabled class="msgBox" id="msgRecibido"></textarea>
+      <button id="btnClear">Clear</button>
+    </section>
+    <script>
+      const text = document.getElementById('msgEnvio');
+      const btnSend = document.getElementById('btnSend');
+      const textRecibido = document.getElementById('msgRecibido');
+      const btnClear = document.getElementById('btnClear');
+
+      btnSend.addEventListener('click', () => {
+        if (!text.value == '') {
+          textRecibido.innerHTML += '- ' + text.value + '\n';
+          text.value = '';
+        } else {
+          alert('Escriba algun mensaje');
+        }
+      });
+
+      btnClear.addEventListener('click', () => {
+        textRecibido.innerHTML = '';
+      });
+    </script>
+  </body>
+</html>

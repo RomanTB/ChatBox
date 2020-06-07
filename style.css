@@ -1,0 +1,59 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#emisor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.msgBox {
+  min-width: 200px;
+  width: 25vw;
+  min-height: 200px;
+  height: 30vh;
+  border-radius: 5px;
+  background-color: aliceblue;
+  text-align: start;
+  text-justify: distribute;
+  resize: none;
+  padding: 5px;
+}
+
+#receptor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+h3 {
+  padding: 5px;
+}
+button {
+  padding: 5px;
+  margin: 10px;
+  background-color: yellowgreen;
+  border-radius: 5px;
+  border: 0ch;
+  width: 100%;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(186, 238, 83);
+}
